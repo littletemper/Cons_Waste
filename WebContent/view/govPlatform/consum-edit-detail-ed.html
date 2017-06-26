@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>消纳合约编辑详情-已提交</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    
+<style type="text/css">
+main{
+  width: 1206px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainright{
+  width: 925px;
+  float: right;
+  padding-bottom: 50px;
+  position: relative;
+}
+.btn-top{
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.order-num{
+  padding: 10px 0 20px 0;
+}
+.mess-box{
+  margin-bottom: 20px;
+  line-height: 26px;
+}
+.mess-box span{
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+.mess-box p{
+  width: 420px;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+}
+
+.mess-hide,.mess-show{
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+}
+.mess-hide-input{
+  width: 840px;
+  border:1px solid #309bbe;
+  border-top: 5px solid #309bbe;
+  margin: 0 auto;
+  line-height: 60px;
+}
+
+.map-input img{
+  width: 700px;
+  height: 140px;
+  margin: 0;
+  padding: 0;
+}
+.space{
+  display: inline-block;
+  width: 200px;
+}
+.btn-box{
+  width: 300px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.btn-warning{
+  background-color: #f60;
+}
+#long-p p{
+  width: 600px;
+}
+#long-p .other{
+  display: inline-block;
+  width: 160px;
+  text-align: left;
+}
+</style>
+</head>
+<body >
+    <!-- head -->
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+    <!-- head end-->
+
+
+	<main>
+        <!-- leftmenu -->
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/govplatform-left.html">
+        </iframe>
+        <!-- leftmenu end-->
+           
+        <div class="mainright">
+            <div class="title"><p>消纳合约编辑</p></div>
+            <div class="btn-top">
+              <button class="btn btn-warning">取消</button>
+              <button class="btn btn-warning">确认</button>
+              <button class="btn btn-warning">撤回</button>
+            </div> 
+            <div class="mess-box ">
+              <div class="order-num">
+               <p><span>合约单号：</span>0000000001号(已提交)</p>
+               <p><span>合约类型：</span>消纳合约</p>
+               <div class="clearbox"></div>
+              </div>
+            </div>
+            
+            <div class="mess-box">
+              <div class="title"><p>项目信息</p></div>
+              <div class="mess-show ">
+                <p><span>项目名称：</span>XXX渣土清运项目</p>
+                <p><span>项目地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+                <p><span>负责人：</span>张XXX</p>
+                <p><span>负责人电话：</span>13323456789</p>
+                <p><span>残土数量：</span>XXX m</p>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="mess-box">
+              <div class="title"><p>消纳场信息</p></div>
+              <div class="mess-show">
+                <p><span>消纳场名称：</span>XXX渣土清运项目</p>
+                <p><span>消纳场地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+                <p><span>联系人：</span>张XXX</p>
+                <p><span>联系人电话：</span>13323456789</p>
+                <p><span>垃圾类型：</span>道路开挖垃圾、建筑施工垃圾</p>
+                <p><span>消纳数量：</span>XXX m</p>
+                <p><span>所属公司：</span>XXXXXXXX消纳公司</p>
+                <p><span>和项目关系：</span>项目下消纳场</p>
+                <div class="clearfix"></div>                
+              </div>
+            </div>
+            <div class="mess-box">
+              <div class="title"><p>合约要求</p></div>
+              <div class="mess-hide">
+                <div class="mess-hide-mess">
+                    <p><span>合约名称：</span>XXX清运合约</p>
+                    <p><span>合约期限：</span>2016/01/01~016/12/31</p>
+                    <div id="long-p">
+                      <p><span>垃圾类型：</span><span class="other">土地开挖垃圾</span>1000元/吨</p><br>
+                      <p><span></span><span class="other">道路开挖垃圾</span>1000元/吨</p><br>
+                      <p><span></span><span class="other">旧建筑物拆除垃圾</span>1000元/吨</p><br>
+                      <p><span></span><span class="other">建筑施工垃圾</span>1000元/吨</p> <br>
+                    </div>   
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mess-box">
+              <div class="title"><p>对账信息</p></div>
+              <div class="mess-hide ">
+                <div class="mess-hide-mess">
+                    <p><span>对账方式：</span>按月对账</p>
+                    <p><span>对账时间：</span>每月31号(不足31天的月份以最后一天)</p>
+                    <p><span>出账时间：</span>15天(对账日后)</p>
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mess-box">
+              <div class="title"><p>付款要求</p></div>
+              <div class="mess-hide">
+                <div class="mess-hide-mess">
+                    <p><span>付款时间：</span>15天(按月对账)</p>
+                    <p><span>付款比例：</span>50%</p>
+                    <p><span></span>30天(对账日后)</p>
+                    <p><span></span>50%</p>
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-box">
+                <button class="btn btn-warning">上一步</button>      
+                <button class="btn btn-warning">保存</button>
+                <button class="btn btn-warning">提交</button>      
+            </div>
+
+        </div><!-- mainright -->    
+
+
+    </main>
+
+    <!-- footer -->
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+     <!-- footer end-->
+
+<script type="text/javascript">
+  // $(function(){
+  //     $(".edit").click(function(){
+  //        $(this).parent().find(".mess-show").hide();
+  //        $(this).parent().find(".mess-hide").slideDown();    
+  //     })
+
+  //     $(".sub-btn").click(function(){
+  //       var ss=$(this).parents().parents().parents().parents();
+  //       ss.find(".mess-hide-input").slideUp()
+  //       ss.find(".mess-hide-mess").show();
+        
+  //     })
+
+  // })
+</script>
+</body>
+</html>

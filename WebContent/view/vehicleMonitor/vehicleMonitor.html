@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+</head>
+<style>
+
+    .navPoint{width: 50px;height: 50px;border: 1px solid red}
+
+    .smallNavBar{width: 50px;border: 2px solid red;float: left ;display: none;position: relative;}
+    .smallNav{width: 50px;height: 50px;border: 1px solid red;float: left}
+
+    .smallNavIcon{width: 30px;height: 30px;border: 1px solid red;margin-left: 60px;float: left;display: none}
+
+    .normalNavBar{width: 200px;float: left;border: 1px solid blue;display: none}
+    .normalNav{height: 50px;position: relative;border: 1px solid blue}
+
+    .conStyle{height: 200px;position: relative;border: 1px solid blue;display: none;filter:alpha(Opacity=50);-moz-opacity:0.6;opacity: 0.6}
+
+
+    .horNavBar{height: 50px;border: 2px solid red;float: right ;position: relative;}
+    .horNav{height: 50px;width: 50px;border: 1px solid red;float: right}
+    .horNavContent{width: 150px;height: 100px;border: 1px solid red;margin-top: 50px;float: top;display: none;filter:alpha(Opacity=50);-moz-opacity:0.6;opacity: 0.6}
+
+    .alarmMsgIcon{height: 50px;width: 50px;border: 1px solid red;float: right}
+    .alarmMsgCont{width: 150px;height: 600px;border: 1px solid red;float: right;display: none;}
+    .alarmMsgDetail{width: 150px;height: 300px;border: 1px solid red;}
+</style>
+<body background="../../img/vehicleMonitor.png">
+
+<div class="div_b">
+
+    <div id="np" class="navPoint">0
+    </div>
+
+    <div id="sn" class="smallNavBar">
+        <div id="sn_1" class="smallNav">1
+            <div id="sn_1_icon" class="smallNavIcon"> </div>
+        </div>
+        <div id="sn_2" class="smallNav">2
+            <div id="sn_2_icon" class="smallNavIcon"></div>
+        </div>
+    </div>
+
+    <div id="nn" class="normalNavBar">
+        <div id="nn_1" class="normalNav"></div>
+        <div id="rail" class="conStyle" >报警区域：<input /> </div>
+        <div id="nn_2" class="normalNav"></div>
+    </div>
+
+    <div id="alarmMsgCont" class="alarmMsgCont">
+        <div class="alarmMsgDetail">报警</div>
+        <div class="alarmMsgDetail">举报</div>
+    </div>
+
+    <div id="alarmMsgIcon" class="alarmMsgIcon">
+
+    </div>
+
+    <div id="hn" class="horNavBar">
+        <div id="hn_1" class="horNav">1
+            <div id="hn_1_cont" class="horNavContent">
+
+            </div>
+        </div>
+        <div id="hn_2" class="horNav">2
+            <div id="hn_2_cont" class="horNavContent">
+
+            </div>
+        </div>
+        <div id="hn_3" class="horNav">3
+            <div id="hn_3_cont" class="horNavContent">
+                <p>张三 大货 三分钟前</p>
+                <p>李四 大货 十分钟前</p>
+            </div>
+        </div>
+        <div id="hn_4" class="horNav">4
+            <div id="hn_4_cont" class="horNavContent">
+                <p>张三 大货 三分钟前</p>
+                <p>李四 大货 十分钟前</p>
+            </div>
+        </div>
+        <div id="hn_5" class="horNav">5
+            <div id="hn_5_cont" class="horNavContent">
+                <p>张三 大货 三分钟前</p>
+                <p>李四 大货 十分钟前</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script>
+    $(function(){
+
+        $("#np").on('click',function(){
+            $("#sn").animate({
+                height:'toggle'
+            })
+            $("#nn").hide()
+        })
+
+        $("#sn").on('click',function(){
+            $("#sn").hide();
+            $("#nn").animate({
+                width:'toggle'
+            });
+        })
+
+        $("#nn_1").on('click',function(){
+            $("#rail").slideToggle("slow");
+        })
+
+        $("#sn_1").on('mouseover',function(){
+            $("#sn_1_icon").animate({
+                width:'toggle'
+            },"slow");
+        }).on('mouseout',function(){
+            $('#sn_1_icon').css('display', 'none');
+        })
+
+        $("#sn_2").on('mouseover',function(){
+            $("#sn_2_icon").animate({
+                width:'toggle'
+            },"slow");
+        })
+
+        $("#hn_1").on('click',function(){
+            $("#hn_1_cont").animate({
+                height:'toggle'
+            },"slow");
+            //$('#hn_1_cont').css('display', 'none');
+            $('#hn_2_cont').css('display', 'none');
+            $('#hn_3_cont').css('display', 'none');
+            $('#hn_4_cont').css('display', 'none');
+            $('#hn_5_cont').css('display', 'none');
+            $('#alarmMsgCont').css('display', 'none');
+        })
+
+        $("#hn_2").on('click',function(){
+            $("#hn_2_cont").animate({
+                height:'toggle'
+            },"slow");
+            $('#hn_1_cont').css('display', 'none');
+           // $('#hn_2_cont').css('display', 'none');
+            $('#hn_3_cont').css('display', 'none');
+            $('#hn_4_cont').css('display', 'none');
+            $('#hn_5_cont').css('display', 'none');
+            $('#alarmMsgCont').css('display', 'none');
+        })
+
+        $("#hn_3").on('click',function(){
+            $("#hn_3_cont").animate({
+                height:'toggle'
+            },"slow");
+            $('#hn_1_cont').css('display', 'none');
+            $('#hn_2_cont').css('display', 'none');
+            //$('#hn_3_cont').css('display', 'none');
+            $('#hn_4_cont').css('display', 'none');
+            $('#hn_5_cont').css('display', 'none');
+            $('#alarmMsgCont').css('display', 'none');
+        })
+
+        $("#hn_4").on('click',function(){
+            $("#hn_4_cont").animate({
+                height:'toggle'
+            },"slow");
+            $('#hn_1_cont').css('display', 'none');
+            $('#hn_2_cont').css('display', 'none');
+            $('#hn_3_cont').css('display', 'none');
+            //$('#hn_4_cont').css('display', 'none');
+            $('#hn_5_cont').css('display', 'none');
+            $('#alarmMsgCont').css('display', 'none');
+        })
+
+        $("#hn_5").on('click',function(){
+            $("#hn_5_cont").animate({
+                height:'toggle'
+            },"slow");
+            $('#hn_1_cont').css('display', 'none');
+            $('#hn_2_cont').css('display', 'none');
+            $('#hn_3_cont').css('display', 'none');
+            $('#hn_4_cont').css('display', 'none');
+            //$('#hn_5_cont').css('display', 'none');
+            $('#alarmMsgCont').css('display', 'none');
+        })
+
+        $("#alarmMsgIcon").on('click',function(){
+            $("#alarmMsgCont").animate({
+                width:'toggle'
+            },"slow");
+            $('#hn_1_cont').css('display', 'none');
+            $('#hn_2_cont').css('display', 'none');
+            $('#hn_3_cont').css('display', 'none');
+            $('#hn_4_cont').css('display', 'none');
+            $('#hn_5_cont').css('display', 'none');
+            //$('#alarmMsgCont').css('display', 'none');
+        })
+
+    })
+</script>
+
+
+</body>
+</html>

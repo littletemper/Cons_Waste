@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>平台首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="../../js/html5.js"></script>
+        <script src="../../js/response.min.js"></script>
+        <script type="text/javascript">
+        </script>
+    <![endif]-->
+ <!--    // <script src="../../js/jquery-2.1.4.min.js"></script>
+    // <script src="../../js/bootstrap.min.js"></script> -->
+
+<style type="text/css">
+#menu-nav{
+    font-size: 22px;
+}
+.summary {
+    margin-bottom: 40px;
+}
+.summary h3{
+    font-weight: 700;
+    color: blue;
+    margin-top: 60px;
+}
+.summary .col-md-2 {
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 17px;
+    }
+    .summary img:hover{
+        /*transform:scale(1.2);*/
+        transform:rotateY(360deg);
+    }
+    .summary img{
+        transition:all 1s;
+    }
+.icon-bar{
+  background: red;
+}
+.navbar{
+    border-radius: 0;
+}
+.search-bar{
+    text-align: center;
+}
+.feature-divider {
+    margin: 40px 0;
+    border: 1px solid #dcdcdc;
+}
+.blue-con{
+    background-color: #309bbe;
+    color: #fff;
+    text-align: left;
+    padding: 10px 0;
+}
+.black-con{
+    background-color: #000;
+    color: #fff;
+    padding: 6px 0;
+}
+.search-width{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.btn-lg{
+    background-color: #38c2c5;
+    background: #38c2c5 url(../../img/sear.png) no-repeat 5px 5px;
+}
+.input-lg{
+    background-color: #98cddf;
+}
+.bottom-blue{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.bottom-blue .col-md-2{
+    margin-left: 25px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;  
+}
+
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #fff;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #fff;
+}
+object{
+    margin-bottom: -5px;
+}
+</style>
+
+<body >
+
+    <!-- 黑色导航条 -->
+    <div class="navbar navbar-inverse" role="navigation" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">必然科技建筑垃圾监管平台欢迎您！(V0.0.0)</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#ad-carousel">您好，Biran</a></li>
+                    <li><a href="#summary-container">退出</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#about-modal">个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+    <!-- 顶部导航 -->
+    <div class="navbar " role="navigation" id="menu-nav" style="margin-bottom:0;">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">logo图标</a>
+                <!-- <img src="../../img/logo.png" alt=""  width="100px" height="100px" style="backround:red;"> -->
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#ad-carousel">首页</a></li>
+                    <li><a href="#summary-container">应用下载</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">交流互动 <span class="caret"></span></a>
+                        <ul class="dropdown-menu " role="menu">
+                            <li><a href="#feature-tab" data-tab="tab-chrome">手机App下载</a></li>
+                            <li><a href="#feature-tab" data-tab="tab-firefox">手机App下载</a></li>
+                            <li><a href="#feature-tab" data-tab="tab-safari">手机App下载</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../register/login.html" >用户登陆</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+    <!-- 搜索框   -->
+    <div class="container-fluid blue-con search-bar ">
+        <div class="container">      
+          <div class="search-width" >
+            <div class="input-group ">
+              <input type="text" class="form-control input-lg" placeholder="请输入关键字">
+              <span class="input-group-btn">
+                <button class="btn btn-default btn-lg btn-info" type="button">&nbsp&nbsp&nbsp</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-8 -->
+     
+        </div><!-- /.row -->
+       
+    </div>
+    <!-- 广告轮播 -->
+
+    <script src="../../js/jquery-1.12.0.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+</html>

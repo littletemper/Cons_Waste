@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>清运合约查看列表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    
+<style type="text/css">
+main{
+  width: 1206px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainright{
+  width: 925px;
+  float: right;
+}
+/*search-bar*/
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.info{
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  position: relative;
+  margin-bottom: 20px;
+}
+.info form{
+  position: absolute;
+  right: 10px;
+  top: 68px;
+}
+.addbtn{
+  width: 100px;
+  height: 30px;
+  background: #f60;
+  margin: 20px;
+}
+.addnode{
+  display: inline-block;
+  box-sizing:border-box;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #dcdcdc;
+  border-radius: 50%;
+  font-size: 26px;
+  color: #dcdcdc;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 3px;
+}
+.right-bottom{
+  border: 1px solid #dcdcdc;
+}
+.form-group{
+  margin-right: 10px;
+}
+.form-control{
+  width: 265px;
+}
+.form-lable{
+  float: left;
+  position: relative;
+  top: 7px;
+}
+.search-text{
+  width: 265px;
+  height: 34px;
+  float: left;
+}
+.search-btn{
+  width: 70px;
+  height: 35px;
+  background: url(../../img/search-btn.png);
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  cursor:pointer;
+  float: left;
+}
+/*tab--table*/
+.table-info{
+  width: 95%;
+ 
+  margin: 20px auto;
+}
+table{
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+}
+tr{
+  height: 55px;
+  border-bottom: 1px solid #dcdcdc;
+  text-align: center;
+}
+thead{
+  height: 40px;
+  font-weight: bolder;
+  background-color: #f0f0f0;
+}
+
+</style>
+</head>
+<body >
+    <!-- head -->
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+    <!-- head end-->
+
+
+	<main>
+        <!-- leftmenu -->
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/govplatform-left.html">
+        </iframe>
+        <!-- leftmenu end-->
+           
+        <div class="mainright">
+            <!-- search -->
+            <div class="info">
+                <div class="title"><p>清运合约查看列表</p></div>      
+            </div>
+       
+            <!-- search end-->
+            <div class="right-bottom">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                  <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">未提交(12)</a></li>
+                  <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">已提交(9)</a></li>
+                  <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">已确认(3)</a></li>
+                </ul>
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane active" id="home">
+                    <div class="table-info">
+                        <table>
+                            <thead>      
+                              <td width="50">NO.</td>
+                              <td width="80">合约单号</td>
+                              <td width="120">合约名称</td>
+                              <td width="120">公司名称</td>
+                              <td width="180">项目名称</td>
+                              <td width="200">有效期</td>              
+                            </thead>
+                            <tr>
+                              <td>1</td>
+                              <td>001</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX建筑垃圾清理项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td>002</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX道路施工项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td>003</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX道路施工项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>           
+                        </table>
+                    
+                        <!--  page -->
+                        <nav class="pull-right">
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                        </nav>
+                        <div class="clearfix"></div>
+                         <!-- page end -->
+                    </div>         
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="profile">
+                    <div class="table-info">
+                        <table>
+                            <thead>      
+                              <td width="50">NO.</td>
+                              <td width="80">合约单号</td>
+                              <td width="120">合约名称</td>
+                              <td width="120">公司名称</td>
+                              <td width="180">项目名称</td>
+                              <td width="200">有效期</td>              
+                            </thead>
+                            <tr>
+                              <td>4</td>
+                              <td>004</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX建筑垃圾清理项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td>005</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX道路施工项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>
+                            <tr>
+                              <td>6</td>
+                              <td>006</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX道路施工项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>           
+                        </table>
+                        <!--  page -->
+                        <nav class="pull-right">
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                        </nav>
+                        <div class="clearfix"></div>
+                         <!-- page end -->
+                    </div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane" id="messages">           
+                    <div class="table-info">
+                        <table>
+                            <thead>      
+                              <td width="50">NO.</td>
+                              <td width="80">合约单号</td>
+                              <td width="120">合约名称</td>
+                              <td width="120">公司名称</td>
+                              <td width="180">项目名称</td>
+                              <td width="200">有效期</td>              
+                            </thead>
+                            <tr>
+                              <td>7</td>
+                              <td>007</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX建筑垃圾清理项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>
+                            <tr>
+                              <td>8</td>
+                              <td>008</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX道路施工项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>
+                            <tr>
+                              <td>9</td>
+                              <td>009</td>
+                              <td>XXX清运合约</td>
+                              <td>XXX清运公司</td>
+                              <td>XXX道路施工项目</td>
+                              <td>2016-2-12~2016-10-6</td>
+                            </tr>           
+                        </table>
+                        <!--  page -->
+                        <nav class="pull-right">
+                            <ul class="pagination">
+                              <li>
+                                <a href="#" aria-label="Previous">
+                                  <span aria-hidden="true">&laquo;</span>
+                                </a>
+                              </li>
+                              <li class="active"><a href="#">1</a></li>
+                              <li><a href="#">2</a></li>
+                              <li><a href="#">3</a></li>
+                              <li><a href="#">4</a></li>
+                              <li><a href="#">5</a></li>
+                              <li>
+                                <a href="#" aria-label="Next">
+                                  <span aria-hidden="true">&raquo;</span>
+                                </a>
+                              </li>
+                            </ul>
+                        </nav>
+                        <div class="clearfix"></div>
+                         <!-- page end -->
+                    </div>
+                  </div>
+                </div>
+            </div> 
+        </div>     
+
+
+    </main>
+
+    <!-- footer -->
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+     <!-- footer end-->
+
+
+</body>
+</html>

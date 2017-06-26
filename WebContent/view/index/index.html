@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>平台首页</title>
+    <meta charset="utf-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="../../js/html5.js"></script>
+        <script src="../../js/response.min.js"></script>
+        <script type="text/javascript">
+        </script>
+    <![endif]-->
+ <!--    // <script src="../../js/jquery-2.1.4.min.js"></script>
+    // <script src="../../js/bootstrap.min.js"></script> -->
+
+<style type="text/css">
+#menu-nav{
+    font-size: 22px;
+}
+.summary {
+    margin-bottom: 40px;
+}
+.summary h3{
+    font-weight: 700;
+    color: blue;
+    margin-top: 60px;
+}
+.summary .col-md-2 {
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 17px;
+    }
+    .summary img:hover{
+        /*transform:scale(1.2);*/
+        transform:rotateY(360deg);
+    }
+    .summary img{
+        transition:all 1s;
+    }
+.icon-bar{
+  background: red;
+}
+.navbar{
+    border-radius: 0;
+}
+.search-bar{
+    text-align: center;
+}
+.feature-divider {
+    margin: 40px 0;
+    border: 1px solid #dcdcdc;
+}
+.blue-con{
+    background-color: #309bbe;
+    color: #fff;
+    text-align: left;
+    padding: 10px 0;
+}
+.black-con{
+    background-color: #000;
+    color: #fff;
+    padding: 6px 0;
+}
+.search-width{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.btn-lg{
+    background: #38c2c5 url(../../img/sear.png) no-repeat 5px 5px;
+}
+.input-lg{
+    background-color: #98cddf;
+}
+.bottom-blue{
+    max-width: 800px;
+    margin: 0 auto;
+}
+.bottom-blue .col-md-2{
+    margin-left: 25px;
+}
+input[placeholder]{
+    color: #fff;
+}
+#mylist {
+    line-height: 40px;
+    background: red;
+}
+:-moz-placeholder { 
+    color: #fff;
+}
+
+input::-moz-placeholder { 
+    color: #fff;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #fff;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #fff;
+}
+object{
+    margin-bottom: -5px;
+}
+</style>
+
+<body >
+
+<!--头-->
+    <!-- 黑色导航条 -->
+    <div class="navbar navbar-inverse" role="navigation" >
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">必然科技建筑垃圾监管平台欢迎您！(V0.0.0)</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#ad-carousel">您好，Biran</a></li>
+                    <li><a href="#summary-container">退出</a></li>
+                   
+                    <li><a href="../govPlatform/add-clear-contr.html" >个人中心</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+    <!-- 顶部导航 -->
+    <div class="navbar " role="navigation" id="menu-nav">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">logo图标</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="appdown.html">应用下载</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">交流互动 <span class="caret"></span></a>
+                        <ul class="dropdown-menu " role="menu">
+                            <li><a href="#feature-tab" >手机App下载</a></li>
+                            <li><a href="#feature-tab" >手机App下载</a></li>
+                            <li><a href="#feature-tab" >手机App下载</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../register/login.jsp" >用户登陆</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>    
+    <!-- 搜索框   -->
+    <div class="container-fluid blue-con search-bar ">
+        <div class="container">      
+          <div class="search-width" >
+            <div class="input-group ">
+              <input type="search" class="form-control input-lg" placeholder="请输入关键字" list="search-text">
+              <div >
+              <datalist id="search-text" style="font-size:18px;">
+                <ul id="mylist">
+                    <li><option value="消纳场查询" >消纳场查询</option></li>
+                    <li><option value="消纳场查询" >消纳场查询</option></li>
+                    <li><option value="消纳场查询" >消纳场查询</option></li>
+                </ul>
+<!--                 <option value="消纳场查询" >消纳场查询</option>
+                <option value="运输公司查询">运输公司查询</option>
+                <option value="公告查询">公告查询</option>
+                <option value="违章查询">违章查询</option> --> 
+              </datalist> 
+              </div> 
+              <span class="input-group-btn">
+                <button class="btn btn-default btn-lg btn-info" type="button">&nbsp&nbsp&nbsp</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-8 -->
+     
+        </div><!-- /.row -->
+       
+    </div>
+    <!-- 广告轮播 -->
+    <div id="ad-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#ad-carousel" data-slide-to="1"></li>
+            <li data-target="#ad-carousel" data-slide-to="2"></li>
+
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="../../img/1a.jpg" alt="1 slide">
+            </div>
+            <div class="item">
+                <img src="../../img/2a.jpg" alt="2 slide">
+            </div>
+            <div class="item">
+                <img src="../../img/3a.jpg" alt="3 slide">
+            </div>
+        </div>
+        <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+                class="glyphicon "></span></a>
+        <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+                class="glyphicon "></span></a>
+    </div>
+    <!-- 内容 -->
+    <div class="container summary ">
+        <div class="row text-center" id="">
+            <h3>业务领域</h3>
+             <hr class="feature-divider">
+            <div class="col-md-2 ">
+            </div>
+            <a href="../govNotice/gov-intro.html">
+                <div class="col-md-2">
+                    <img class="img-circle" src="../../img/B.jpg" alt="" >
+                <h4>政务公告</h4>
+            </div>
+            </a>
+            <a href="../approvalManage/approval-intro.html">
+                <div class="col-md-2">
+                    <img class="img-circle" src="../../img/C.jpg" alt="" >
+                    <h4>核准业务</h4>
+                </div>
+            </a>
+            <a href="../trafficViolation/traffic-violation-check.html">
+            <div class="col-md-2">
+                <img class="img-circle" src="../../img/D.jpg" alt="" >
+                <h4>违章管理</h4>
+            </div>
+            </a>
+            <div class="col-md-2">
+            </div>
+        </div>
+        <div class="row " id="">
+            <a href="../constructShow/construct-show.html">
+                <div class="col-md-2 ">
+                    <img class="img-circle" src="../../img/E.jpg" alt="" >
+                    <h4>施工项目</h4>
+                </div>
+            </a>
+            <a href="../consumeShow/consume-show.html">
+                <div class="col-md-2">
+                    <img class="img-circle" src="../../img/F.jpg" alt="" >
+                    <h4>消纳场</h4>
+                </div>
+            </a>
+            <a href="../buildShow/build-show.html">
+                <div class="col-md-2">
+                    <img class="img-circle" src="../../img/G.jpg" alt="" >
+                    <h4>建筑企业</h4>
+                </div>
+            </a>
+            <a href="../transportShow/transport-show.html">
+                <div class="col-md-2">
+                    <img class="img-circle" src="../../img/H.jpg" alt="" >
+                    <h4>运输企业</h4>
+                </div>
+            </a>
+            <a href="../clearShow/clear-show.html">
+                <div class="col-md-2">
+                    <img class="img-circle" src="../../img/I.jpg" alt="" >
+                    <h4>消纳消纳企业</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+<!--底部-->
+<object style="border:0px" type="text/x-scriptlet" data="../footer/platform-footer.html" width=100% height=245></object>
+    <script src="../../js/jquery-1.12.0.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+</html>

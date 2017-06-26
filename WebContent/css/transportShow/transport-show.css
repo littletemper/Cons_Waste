@@ -1,0 +1,32 @@
+main{
+	width: 850px;
+	margin: 0 auto;
+	border-bottom: 2px solid #dcdcdc;
+	padding: 10px 20px;
+}
+.title{
+	background: #f0f0f0;
+	padding: 10px;
+}
+.construct{
+	border-bottom: 2px solid #dcdcdc;
+	padding: 10px;
+}
+.construct-text{
+	width: 550px;
+
+	line-height: 25px;
+	float: left;
+}
+.construct-text h5{
+	font-weight: bolder;
+}
+.construct img{
+	display: inline-block;
+	width: 140px;
+	height: 140px;
+	border: 1px solid #dcdcdc;
+	float: left;
+	margin: 0 30px;
+
+}

@@ -1,0 +1,73 @@
+main{
+	width: 1206px;
+	margin: 0 auto;
+	padding: 0;
+
+}
+
+
+.mainright{
+	width: 925px;
+	float: right;
+	margin-bottom: 30px;
+}
+.mainright p{
+	background: #f0f0f0;
+	height: 40px;
+	line-height: 40px;
+	margin-bottom: 40px;
+	font-weight: bolder;
+	padding-left: 20px;
+}
+.info{
+	width: 100%;
+	padding-bottom: 50px;
+	border: 1px solid #dcdcdc;
+
+}
+
+.rednode{
+	color: red;
+}
+h5{
+	margin-left: 50px;
+}
+.box{
+	width: 700px;
+	height: 110px;
+	margin-left: 125px;
+	margin-top: 15px;
+
+}
+.pic-box{
+	width: 100px;
+	height: 100px;
+	border:1px solid #dcdcdc;
+	float: left;
+	border-radius: 3px;
+	margin-right: 38px;
+	box-sizing:content-box;
+}
+.pic-box img{
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+.textarea{
+	float: right;
+	position: relative;
+	right: 140px;
+}
+.btn{
+	margin-left: 400px;
+	background-color: #f60;
+}
+h1{
+	font-size: 14px;
+	width: 655px;
+	margin:10px 0 30px 0;
+}
+
+

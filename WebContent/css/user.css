@@ -1,0 +1,21 @@
+
+.password_reset_del{width:100%;height:35px;margin:0 auto;margin-top:40px;margin-bottom:15px}
+.password_reset_validation{marign-left:5px;width:100px;height:34px;background-color:#bfbfbf;color:white}
+.body_size{width:930px;margin:0 auto;height: 560px;}
+.body_limit_size{width:80%;margin:0 auto}
+.content{width:1206px;height:400px;margin-top:30px}
+.content_title{font-size: 20px;font-weight:bold}
+.content_username{width:120px;float:left;height:35px;margin-top:5px}
+.content_username span{float:right}
+.content_input{width:70%;height:35px;float:left}
+.content_input input{width:200px;height:34px}
+.button_next{width:318px;height:34px;background-color: #ffb000;border:none;border-radius: 4px;color: white;margin-left:192px;margin-top:50px}
+/* 登录*/
+.body_img{float:left;margin-top:45px;}
+.body_right{width:370px;margin-top:90px;box-shadow: 5px 5px 10px grey;border:2px solid #1dd2af}
+.body_right_content{width:90%;margin:0 auto;margin-top:25px;}
+.body_right_register{float:right;color:red;margin-right:8px;text-decoration: none}
+.body_right_register_img{float:right;margin-top:3px;margin-left:2px}
+.body_right_perp{height:40px;width:350px;margin-top:15px;margin-bottom:15px}
+.body_right_perp input[type=text], input[type=password]{width:280px;height:32px;float:left}
+.body_right_checkbox{margin-top: 5px;float:left}

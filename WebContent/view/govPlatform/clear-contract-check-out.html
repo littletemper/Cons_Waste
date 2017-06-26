@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>清运合约详情查看（弹出）</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+<style type="text/css">
+.mark{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.mark-uper{
+    width: 925px;
+    background-color: #fff;
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -400px;
+    padding: 50px 30px;
+}
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.order-num{
+  padding: 10px 0 20px 0;
+}
+.mess-box{
+  margin-bottom: 20px;
+  line-height: 26px;
+}
+.mess-box span{
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+.mess-box p{
+  width: 400px;
+  height: 35px;
+  line-height: 35px;
+  float: left;
+}
+
+.mess-hide,.mess-show{
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+}
+.mess-hide-input{
+  width: 840px;
+  border:1px solid #309bbe;
+  border-top: 5px solid #309bbe;
+  margin: 0 auto;
+  line-height: 60px;
+}
+
+.map-input img{
+  width: 700px;
+  height: 140px;
+  margin-left: 100px;
+  padding: 0;
+}
+
+
+</style>
+</head>
+<body >
+    <div class="mark"></div>
+    <div class="mark-uper">  
+        <div class="title"><p>清运合约详情</p></div>
+        <div class="mess-box ">
+          <div class="order-num">
+           <p><span>合约单号：</span>0000000001号(已提交)</p>
+           <p><span>合约类型：</span>清运合约</p>
+           <div class="clearbox"></div>
+          </div>
+        </div>
+        
+        <div class="mess-box">
+          <div class="title"><p>项目信息</p></div>
+          <div class="mess-show ">
+            <p><span>项目名称：</span>XXX渣土清运项目</p>
+            <p><span>项目地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+            <p><span>负责人：</span>张XXX</p>
+            <p><span>负责人电话：</span>13323456789</p>
+            <p><span>残土数量：</span>XXX m</p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="mess-box">
+          <div class="title"><p>消纳场信息</p></div>
+          <div class="mess-show">
+            <p><span>消纳场名称：</span>XXX渣土清运项目</p>
+            <p><span>消纳场地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+            <p><span>联系人：</span>张XXX</p>
+            <p><span>联系人电话：</span>13323456789</p>
+            <p><span>垃圾类型：</span>道路开挖垃圾、建筑施工垃圾</p>
+            <p><span>消纳数量：</span>XXX m</p>
+            <p><span>所属公司：</span>XXXXXXXX消纳公司</p>
+            <p><span>和项目关系：</span>项目下消纳场</p>
+            <div class="clearfix"></div>                
+          </div>
+        </div>
+        <div class="mess-box">
+          <div class="title"><p>运输公司信息</p></div>
+          <div class="mess-show">
+            <p><span>公司名称：</span>XXX渣土清运公司</p>
+            <p><span>公司地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+            <p><span>联系人：</span>张XXX</p>
+            <p><span>联系电话：</span>13323456789</p>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="mess-box">
+          <div class="title"><p>合约要求</p></div>
+          <div class="mess-hide">
+            <div class="mess-hide-mess">
+                <p><span>合约名称：</span>XXX清运合约</p>
+                <p><span>合约期限：</span>2016/01/01~016/12/31</p>
+                <p><span>车型：</span>渣土清运车</p>
+                <p><span>车辆描述：</span>10米&nbsp30吨</p>
+                <p><span>运输费用：</span>按项目计运费 &nbsp&nbsp100000元</p>
+                <div class="clearfix"></div>
+                <span>运输路线：</span>
+                <div class="map-input" style="margin-top:-20px;margin-bottom:15px;">
+                  <img src="../../img/map.png" alt="">
+                </div>
+                
+                <p><span>禁行时间：</span>07:00~19:00</p>
+                <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mess-box">
+          <div class="title"><p>对账信息</p></div>
+          <div class="mess-hide ">
+            <div class="mess-hide-mess">
+                <p><span>对账方式：</span>按月对账</p>
+                <p><span>对账时间：</span>每月31号(不足31天的月份以最后一天)</p>
+                <p><span>出账时间：</span>15天(对账日后)</p>
+                <p><span>联系电话：</span>13323456789</p>
+                <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mess-box">
+          <div class="title"><p>付款要求</p></div>
+          <div class="mess-hide">
+            <div class="mess-hide-mess">
+                <p><span>付款时间：</span>15天(按月对账)</p>
+                <p><span>付款比例：</span>50%</p>
+                <p><span></span>30天(对账日后)</p>
+                <p><span></span>50%</p>
+                <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

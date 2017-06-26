@@ -1,0 +1,156 @@
+.basic input{
+    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border:1px solid #cccccc;
+    height: 28px;
+}
+
+select{
+    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border:1px solid #cccccc;
+    height: 28px;
+}
+/*车辆管理*/
+.parkList{
+    width:935px;
+    height:100px;
+    border:1px solid #dcdcdc;
+    float:right;
+}
+.parkBg{
+    background-color: #f0f0f0;
+    width: 933px;
+    height: 40px;
+    border-bottom: 1px solid #dcdcdc;
+}
+.parkBg span{
+    font-weight: bold;
+    line-height: 40px;
+    margin-left:20px;
+}
+.anNiu{
+    width:200px;
+    height: 50px;
+    float: left;
+}
+.anNiu input{
+    background-color: #f60;
+    color: #ffffff;
+    height:30px;
+    border: none;
+    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    margin-top:15px;
+}
+.searchOne{
+    width:380px;
+    line-height: 56px;
+    height: 50px;
+    float: right;
+}
+.searchOne input{
+    width:250px;
+    height:30px;
+}
+.searchOne a{
+    width: 60px;
+    height: 30px;
+    color: #ffffff;
+    background-color:#309bbe;
+    padding:7px 7px 7px 5px;
+    text-decoration: none;
+    margin-left: -5px;
+
+}
+/*车辆管理表格*/
+.table1{
+    width:935px;
+    height:550px;
+    border:1px solid #dcdcdc;
+    margin-top:120px;
+    line-height: 40px;
+    text-align: center;
+}
+.table1 thead{
+    background-color: #f0f0f0;
+}
+.table1 tr{
+    border-bottom: 1px solid #dcdcdc;
+}
+.table1 a{
+    color: #1dd2af;
+    text-decoration: none;
+}
+/*停车场基本信息*/
+.parkBasic{
+    width:935px;
+    height:800px;
+    border:1px solid #dcdcdc;
+    float:right;
+}
+.basic{
+    width: 933px;
+    height:30px;
+    margin-top: 20px;
+
+}
+.basic2
+{
+    width: 933px;
+    height:30px;
+    margin-top: 20px;
+}
+.basic2 input{
+    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border:1px solid #cccccc;
+}
+textarea{
+    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border:1px solid #cccccc;
+    width: 500px;
+    margin-left:130px;
+    margin-top: -30px;
+
+}
+/*项目信息*/
+.anNiu2{
+    display: inline-block;
+    margin-left:720px;
+}
+.anNiu2 input{
+    background-color: #f60;
+    color: #ffffff;
+    height:30px;
+    border: none;
+    border-radius:4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.table2{
+    width:935px;
+    height:150px;
+    border:1px solid #dcdcdc;
+    margin-top: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+.table2 thead{
+    background-color: #f0f0f0;
+}
+.table2 tr{
+    border-bottom: 1px solid #dcdcdc;
+}

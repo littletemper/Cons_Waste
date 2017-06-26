@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新增清运合约-选择项目</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    
+<style type="text/css">
+main{
+  width: 1206px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainright{
+  width: 925px;
+  float: right;
+}
+/*search-bar*/
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.info{
+  width: 100%;
+  height: 180px;
+  border: 1px solid #dcdcdc;
+  position: relative;
+  margin-bottom: 20px;
+}
+.pro-tips img{
+  width: 900px;
+  margin:20px 12px;
+}
+.info form{
+  position: absolute;
+  right: 5px;
+  top: 120px;
+}
+.addbtn{
+  width: 100px;
+  height: 30px;
+  background: #f60;
+  margin: 20px;
+}
+.addnode{
+  display: inline-block;
+  box-sizing:border-box;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #dcdcdc;
+  border-radius: 50%;
+  font-size: 26px;
+  color: #dcdcdc;
+  line-height: 21px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: 3px;
+}
+.table-info{
+  width: 100%;
+  padding-bottom: 50px;
+  margin-top: 20px;
+
+}
+.form-group{
+  margin-right: 10px;
+}
+.form-control{
+  width: 265px;
+}
+.form-lable{
+  float: left;
+  position: relative;
+  top: 7px;
+}
+.search-text{
+  width: 265px;
+  height: 34px;
+  float: left;
+}
+.search-btn{
+  width: 70px;
+  height: 35px;
+  background: url(../../img/search-btn.png);
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  cursor:pointer;
+  float: left;
+}
+/*tab--table*/
+.table-info{
+  width: 100%;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+table{
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+}
+tr{
+  height: 55px;
+  border-bottom: 1px solid #dcdcdc;
+  text-align: center;
+}
+thead{
+  height: 40px;
+  font-weight: bolder;
+  background-color: #f0f0f0;
+}
+
+.step-btn{
+  width: 220px;
+  height: 40px;
+  margin-left: 360px;
+  margin-bottom: 30px;
+}
+.btn{
+  background-color: #f60;
+}
+</style>
+</head>
+<body >
+    <!-- head -->
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+    <!-- head end-->
+
+
+	<main>
+        <!-- leftmenu -->
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/govplatform-left.html">
+        </iframe>
+        <!-- leftmenu end-->
+           
+        <div class="mainright">
+            <!-- search -->
+            <div class="info">
+                <div class="title"><p>新增合约-选择运输公司</p></div>  
+                <div class="pro-tips"><img src="../../img/pro3.png" alt=""></div>                   
+                <form class="form-inline pull-right">
+                    <div class="form-group">
+                        <label for="exampleInputName2" class="form-lable">关键字：</label>
+                        <input type="text" class="search-text" id="">
+                        <button type="submit" class="search-btn"></button>
+                    </div>     
+                </form>
+                <div class="clearfix"></div>  
+            </div>
+       
+            <!-- search end-->
+ 
+            <!-- table -->
+            <div class="table-info">
+              <table>
+                <thead>      
+                  <td width="50">选择</td>
+                  <td width="170">名称项目</td>
+                  <td width="280">地址</td>
+                  <td width="105">负责人</td>
+                  <td width="130">负责人电话</td>
+                </thead>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a href="">XXX清运公司</a></td>
+                  <td>河北省-驻马店市-驿城区</td>
+                  <td>孙XXX</td>
+                  <td>1334567894</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a href="">XXX道路清运集团</a></td>
+                  <td>河北省-驻马店市-驿城区</td>
+                  <td>王XXX</td>
+                  <td>1334567894</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a href="">XXX建筑垃圾清运公司</a></td>
+                  <td>河北省-驻马店市-驿城区</td>
+                  <td>李XXX</td>
+                  <td>1334567894</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a href="">XXX</a></td>
+                  <td>河北省-驻马店市-驿城区</td>
+                  <td>张XXX</td>
+                  <td>1334567894</td>
+                </tr>
+            </table>            
+            <!-- table end-->
+            <!--  page -->
+            <nav class="pull-right">
+                <ul class="pagination">
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      <span aria-hidden="true">&laquo;</span>
+                    </a>
+                  </li>
+                  <li class="active"><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+            </nav>
+            <div class="clearfix"></div>
+            <!-- page end -->
+            <div class="step-btn">
+                <button class="btn btn-warning">上一步</button>
+                <button class="btn btn-warning">下一步</button>
+            </div>
+        </div><!-- mainright -->    
+
+
+    </main>
+
+    <!-- footer -->
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+     <!-- footer end-->
+
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>申请表维护</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    
+<style type="text/css">
+main{
+  width: 1206px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainright{
+  width: 925px;
+  float: right;
+  margin-bottom: 30px;
+}
+/*search-bar*/
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.info{
+  width: 100%;
+  height: 100px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.info h5{
+  width:300px;
+  float: left;
+  margin: 20px;
+}
+.redspot{
+  color: red;
+  font-size: 40px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: relative;
+  top: -5px;
+}
+.right-bottom{
+  border: 1px solid #dcdcdc;
+}
+.right-bottom-top input,.right-bottom-top select{
+  width: 240px;
+  height: 30px;
+}
+
+.right-bottom h5{
+  font-weight: bolder;
+  text-align: center;
+}
+.right-bottom-top p{
+  width: 400px;
+  float: left;
+  line-height: 40px;
+  margin-left: 20px;
+}
+.right-bottom-top span{
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}
+.right-bottom-bot{
+  position: relative;
+}
+.right-bottom-bot ol li{
+  line-height: 40px;
+}
+.right-bottom-bot span{
+  display: inline-block;
+  width: 300px;
+}
+.right-bottom-bot input{
+  display: inline-block;
+}
+
+.right-bottom-bot p{
+  line-height: 40px;
+  margin-left: 25px;
+}
+.right-bottom-bot textarea{
+/*  position: absolute;
+  left: 140px;
+  top: 340px;*/
+  position: relative;
+  top: -20px;
+  left: 140px;
+  width: 550px;
+  height: 125px;
+
+}
+
+.btn-warning{
+  background-color: #f60;
+  margin: 25px 0 25px 370px; 
+  width: 100px;
+}
+</style>
+</head>
+<body >
+    <!-- head -->
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+    <!-- head end-->
+
+
+	<main>
+        <!-- leftmenu -->
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/govplatform-left.html">
+        </iframe>
+        <!-- leftmenu end-->
+           
+        <div class="mainright">
+            <!-- search -->
+            <div class="info">
+                <div class="title"><p>申请表维护</p></div>      
+                <h5>核准类型：
+                  <select name="" id="">
+                        <option value="">处置证核准</option>
+                        <option value="">准运证核准</option>
+                        <option value="">车辆核准</option>
+                        <option value="">项目核准</option>
+                  </select>
+                </h5>
+                <h5>状态：XXX</h5>
+               
+            </div>
+       
+            <!-- search end-->
+            <div class="right-bottom">
+                <div class="right-bottom-top">
+                    <h5>驻马店市建筑垃圾处置申请表</h5>
+                    <p><span>建设单位：</span>万科华府</p>
+                    <p><span>法定代表：</span>李洁芳</p>
+                    <p><span>单位地址：</span>XXXXXX路XXXX街</p>
+                    <p><span>联系电话：</span>1323330987</p>
+                    <p><span>施工单位：</span>驻马店市XX建设公司</p>
+                    <p><span>法定代表：</span>路飞</p>
+                    <p><span><i class="redspot">*</i>工程名称：</span>
+                      <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value="">驻马店大桥改造</option>
+                        <option value="">皓城天地大厦</option>
+                      </select>
+                    </p>
+                    <p><span>项目经理：</span>路飞</p>
+                    <p><span>处置单位：</span>
+                        <input type="text">
+                    </p>
+                    <p><span>法定代表：</span>刘峰</p>
+                    <p><span>单位地址：</span>XXXXXX路XXX街</p>
+                    <p><span>联系电话：</span>13423459876</p>
+                    <p><span><i class="redspot">*</i>合约名称：</span>
+                      <select name="" id="">
+                        <option value="">请选择</option>
+                        <option value="">XXXX消纳合约</option>
+                        <option value="">XXX处置合约</option>
+                      </select>
+                    </p>
+                    <p><span>合约单号：</span>12342322</p>
+                    <p><span><i class="redspot">*</i>处置垃圾时间：</span>
+                        <input type="text">
+                    </p>
+                    <p><span>处置垃圾放量：</span>
+                        <input type="text">
+                    </p>
+                    <p><span><i class="redspot">*</i>建筑垃圾种类：</span>
+                        <input type="text">
+                    </p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="right-bottom-bot">
+                    <h5>附属材料</h5>
+                    <ol>
+                      <li><span>建筑垃圾处置申请表 </span><input type="file"></li>
+                      <li><span>建设工程规划许可证</span><input type="file"></li>
+                      <li><span>工程施工图纸</span> <input type="file"></li>
+                      <li><span>与处置单位签订的处置协议</span><input type="file"></li>
+                      <li><span>与清运单位签订的清运协议</span><input type="file"></li>
+                    </ol>                   
+                    <p>申请说明：</p>
+                    <textarea>
+                    </textarea>
+                    <p>申请时间：2015/10/10-8:00</p>
+                </div>
+
+            </div>
+            <button class="btn btn-warning">保存</button> 
+        </div>     
+
+
+    </main>
+
+    <!-- footer -->
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+     <!-- footer end-->
+
+
+</body>
+</html>

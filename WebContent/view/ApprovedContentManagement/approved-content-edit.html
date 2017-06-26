@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>核准内容维护</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    
+<style type="text/css">
+main{
+  width: 1206px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainright{
+  width: 925px;
+  float: right;
+  padding-bottom: 50px;
+}
+.edit-selext-box{
+  margin-bottom: 20px;
+}
+.edit-select{
+  margin-top: 20px;
+}
+.edit-select select{
+  width: 160px;
+  margin-right: 20px;
+}
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.title h6{
+  position: absolute;
+  left: 770px;
+  font-weight: bolder;
+  padding: 4px 7px;
+}
+.redspot{
+  color: red;
+  font-size: 30px;
+  vertical-align: middle;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  line-height: 26px;
+  margin-right: 10px;
+}
+.moveup{
+  position: relative;
+  top: -3px;
+
+}
+.edit-base{
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  cursor: pointer;
+  background-image: url(../../img/edit.png);
+}
+
+/*tab--table*/
+.mess-box{
+  margin-bottom: 20px;
+  position: relative;
+}
+.order-num{
+  padding: 10px 0 20px 0;
+}
+.mess-hide-mess span{
+  display: inline-block;
+  width: 100px;
+  text-align:right;
+}
+.mess-box p{
+  width: 420px;
+  height: 35px;
+  float: left;
+
+}
+
+.mess-show,.mess-hide{
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+}
+.mess-hide-mess h5{
+  margin-left: -16px;
+}
+.mess-hide-input{
+  width: 840px;
+/*  border:1px solid #309bbe;
+  border-top: 5px solid #309bbe;*/
+  margin: 0 auto;
+  /*line-height: 60px;*/
+}
+/*.mess-hide-input input{
+  height: 30px;
+}*/
+/*.mess-hide-input label{
+  width: 110px;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  line-height: 40px;
+}*/
+
+
+
+
+/*.space{
+  display: inline-block;
+  width: 200px;
+}*/
+/*.node{
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  border:1px solid #dcdcdc;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  box-sizing:content-box;
+  margin-left: -3px;
+}*/
+.conts{
+   width:100px;
+   text-align:center;
+}
+#ifon{
+  width: 200px;
+}
+.mess-hide-input{
+  display: none;
+}
+.btn-warning{
+  background-color: #f60;
+}
+
+/*table*/
+table{
+  width: 320px;
+  border: 1px solid #dcdcdc;
+  margin: 20px;
+  box-sizing:border-box;
+
+}
+table thead{
+  background-color: #f0f0f0;
+  height: 36px;
+  text-align: center; 
+}
+table thead td:nth-child(2){
+  text-align: center;
+}
+table td{
+  height: 20px;
+  margin-bottom: 0;
+}
+table td:nth-child(1),table td:nth-child(3){
+  width: 40px;
+  text-align: center;
+}
+table td:nth-child(2){
+  width: 240px;
+  text-align: left;
+  border-left:1px solid #dcdcdc; 
+  border-right:1px solid #dcdcdc;
+}
+table tr{
+  height: 36px;
+  border-bottom: 1px solid #dcdcdc;
+  margin-bottom: 5px;
+}
+
+
+.hidden-input {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+label{
+  max-height: 100%;
+  margin-bottom: 0;
+}
+input[type=checkbox]+span {
+    /* your style goes here */
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    background: url(../../img/checkoff.png);
+    padding: 0；        
+}
+
+/* active style goes here */
+input[type=checkbox]:checked+span {
+    background: url(../../img/checkon.png);
+
+}
+.addclasstwo{
+  border: 1px dashed #dcdcdc;
+  padding: 5px 15px;
+}
+.class-2-box{
+  display: none;
+}
+
+</style>
+</head>
+<body >
+    <!-- head -->
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+    <!-- head end-->
+
+
+	<main>
+        <!-- leftmenu -->
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/govplatform-left.html">
+        </iframe>
+        <!-- leftmenu end-->
+
+        <div class="mainright">
+            <div class="title"><p>核准内容维护</p></div> 
+            <div class="edit-selext-box">
+                <div class="edit-select">
+                   <span>核准类型：</span>
+                   <select name="" id="">
+                     <option value="">处置证核准</option>
+                     <option value="">准运证核准</option>
+                     <option value="">车辆核准</option>
+                     <option value="">项目核准</option>
+                   </select>                
+                </div>
+                <div class="edit-select">
+                   <span>执行区域：</span>
+                   <select name="" id="">
+                     <option value="">河南省</option>
+                     <option value="">河北省</option>
+                     <option value="">山东省</option>
+                     <option value="">辽宁省</option>
+                     <option value="">...</option>
+                   </select>
+                   <select name="" id="">
+                     <option value="">全部</option>
+                     <option value="">洛阳市</option>
+                     <option value="">驻马店市</option>
+                     <option value="">开封市</option>
+                     <option value="">安阳市</option>
+                     <option value="">...</option>
+                   </select>
+                   <select name="" id="">
+                     <option value="">全部</option>
+                     <option value="">驿城区</option>
+                     <option value="">西平县</option>
+                     <option value="">确山县</option>
+                     <option value="">...</option>
+                   </select>                  
+                </div>              
+            </div>
+            <!-- 处置证申请表 -->
+            <div class="mess-box">
+              <div class="title"><p>处置证申请表</p><h6><i class="redspot moveup">*</i>代表必填项</h6></div>
+              <div  class="edit-base edit edit2"></div>
+              <div class="mess-hide">
+                <div class="mess-hide-input">
+                    <form>                         
+                        <div class="btn-box text-right">
+                          <b class="pull-left">可维护基本信息</b>
+                          <button type="button" class="btn btn-warning sub-btn">确定</button>
+                        </div>
+                          <div class="table-box">
+                              <table class="pull-left">
+                                  <thead>
+                                    <td>选择</td>
+                                    <td>项目</td>
+                                    <td>必填</td>                             
+                                  </thead>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>申请表名称</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位负责人电话</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位负责人电话</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>垃圾数量</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>处置单位</td>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" class="hidden-input" />
+                                            <span class=""></span>
+                                        </label>
+                                    </td>
+                                  </tr>
+                              </table> 
+                              <table class="pull-right">
+                                  <thead>
+                                    <td>选择</td>
+                                    <td>项目</td>
+                                    <td>必填</td>                             
+                                  </thead>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>申请单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位负责人</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>项目名称</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位负责人</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>垃圾种类(下拉框)</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>运输单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>运送时间</td>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" class="hidden-input" />
+                                            <span class=""></span>
+                                        </label>
+                                    </td>
+                                  </tr>
+                              </table>
+                          </div>
+                              <div class="clearfix"></div>
+                              <b class="pull-left">可上传附件信息</b> 
+                              <div class="table-box">
+                              <div class="clearfix"></div>
+                              <table class="pull-left">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>建筑垃圾处置申请表</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>工程施工图纸</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>与清运单位签订的清运协议</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="pull-right">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>建设工程规划许可证</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>与处置单位签订的处置协议</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <div class="clearfix"></div>                          
+                        </div>
+                    </form> 
+                </div>
+                <div class="mess-hide-mess">
+                    <h5>可维护基本信息</h5>
+                    <p><i class="redspot">*</i>申请表名称<!-- 名称内容 --></p>
+                    <p><i class="redspot">*</i>申请单位</p>
+                    <p><i class="redspot">*</i>建设单位</p>
+                    <p><i class="redspot">*</i>建设单位负责人</p>
+                    <p><i class="redspot">*</i>建设单位负责人电话</p>                  
+                    <p><i class="redspot">*</i>项目名称</p>
+                    <p><i class="redspot">*</i>施工单位</p>
+                    <p><i class="redspot">*</i>施工单位负责人</p>
+                    <p><i class="redspot">*</i>施工单位负责人电话</p>                  
+                    <p><i class="redspot">*</i>垃圾种类(下拉框)</p>
+                    <p><i class="redspot"></i>申请说明</p>
+                    <div class="clearfix"></div> 
+                    <h5>可维护基本信息</h5> 
+                    <p><i class="redspot">*</i>清运单位企业法人营业执照</p>                  
+                    <p><i class="redspot">*</i>建筑垃圾处置场垃圾收纳证明</p>
+                    <p><i class="redspot">*</i>道路运输经营许可、车辆行驶证</p>                
+                    <p><i class="redspot">*</i>运输车辆运营、安全、质量</p>  
+                    <p><i class="redspot"></i>与清运单位签订的清运协议</p>               
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div> <!-- mess-box -->
+            <!-- 处置证申请表 end -->
+
+            <!-- 对账信息 -->
+            <div class="mess-box">
+              <div class="title"><p>对账信息</p><h6><i class="redspot moveup">*</i>代表必填项</h6></div>
+              <div class="edit-base edit edit2"></div>
+              <div class="mess-hide ">
+                <div class="mess-hide-input">
+                    <form>                         
+                        <div class="btn-box ">
+                        <div class="edit-select">
+                           <span>可审批内容：</span>
+                           <select name="" id="">
+                             <option value="">处置证核准</option>
+                             <option value="">准运证核准</option>
+                             <option value="">车辆核准</option>
+                             <option value="">项目核准</option>
+                           </select>                
+                        </div>
+                        <h1></h1>
+                          <b class="pull-left">可维护基本信息</b>
+                          <button type="button" class="btn btn-warning sub-btn pull-right">确定</button>
+                          <div class="clearfix"></div>
+                        </div>
+                          <div class="table-box">
+                              <table class="pull-left">
+                                  <thead>
+                                    <td>选择</td>
+                                    <td>项目</td>
+                                    <td>必填</td>                             
+                                  </thead>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>申请表名称</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位负责人电话</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位负责人电话</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>垃圾数量</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>处置单位</td>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" class="hidden-input" />
+                                            <span class=""></span>
+                                        </label>
+                                    </td>
+                                  </tr>
+                              </table> 
+                              <table class="pull-right">
+                                  <thead>
+                                    <td>选择</td>
+                                    <td>项目</td>
+                                    <td>必填</td>                             
+                                  </thead>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>申请单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位负责人</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>项目名称</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位负责人</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>垃圾种类(下拉框)</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>运输单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>运送时间</td>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" class="hidden-input" />
+                                            <span class=""></span>
+                                        </label>
+                                    </td>
+                                  </tr>
+                              </table>
+                          </div>
+                              <div class="clearfix"></div>
+                              <b class="pull-left">可上传附件信息</b> 
+                          <div class="table-box">
+                              <div class="clearfix"></div>
+                              <table class="pull-left">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>建筑垃圾处置申请表</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>工程施工图纸</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>与清运单位签订的清运协议</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="pull-right">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>建设工程规划许可证</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>与处置单位签订的处置协议</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <div class="clearfix"></div>                          
+                        </div>
+                        <b class="pull-left">指派审批人</b> 
+                        <div class="edit-select">
+                           <span>部门：</span>
+                           <select name="" id="">
+                             <option value="">请选择</option>
+                             <option value="">工程部</option>
+                             <option value="">财务部</option>
+                             <option value="">运输部</option>
+                           </select>                
+                        </div>
+                          <div class="table-box">
+                              <div class="clearfix"></div>
+                              <table class="pull-left">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>审批意见</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>上传附件</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="pull-right">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>审批结果</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <div class="clearfix"></div> 
+                              <button type="button" class="addclasstwo">添加二级处置审批表</button>
+
+
+
+
+
+                        </div>
+                    </form> 
+                </div>
+                <div class="mess-hide-mess">
+                    <h5>可审批文件：处置申请表</h5>
+                    <h5>可查看基本信息</h5>
+                    <p>申请表名称<!-- 名称内容 --></p>
+                    <p>申请单位</p>
+                    <p>建设单位</p>
+                    <p>建设单位负责人</p>
+                    <p>建设单位负责人电话</p>                  
+                    <p>项目名称</p>
+                    <p>施工单位</p>
+                    <p>施工单位负责人</p>
+                    <div class="clearfix"></div> 
+                    <h5>可查看附件信息</h5> 
+                    <p>建筑垃圾处置申请表</p>                  
+                    <p>建设工程规划许可证</p>
+                    <p>工程施工图纸</p>                
+                    <p>与处置单位签订的处置协议</p>  
+                    <p><i class="redspot"></i>与清运单位签订的清运协议</p>               
+                    <div class="clearfix"></div>
+                    <h5>指派审批人</h5> 
+                    <p>部门：工程部</p>                  
+                    <p>审批人：张飞</p>
+                    <p>审批意见</p> 
+                    <p><i class="redspot">*</i>审批结果</p>             
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 对账信息 end -->
+
+            <!-- 二级处置核准表 -->
+       
+            <div class="mess-box class-2-box">
+              <div class="title"><p>二级处置核准表</p><h6><i class="redspot moveup">*</i>代表必填项</h6></div>
+              <div class="edit-base edit edit2 class2edit"></div>
+              <div class="mess-hide ">
+                <div class="mess-hide-mess">
+                    <form>                         
+                        <div class="btn-box ">
+                        <div class="edit-select">
+                           <span>可审批内容：</span>
+                           <select name="" id="">
+                             <option value="">处置证核准</option>
+                             <option value="">准运证核准</option>
+                             <option value="">车辆核准</option>
+                             <option value="">项目核准</option>
+                           </select>                
+                        </div>
+                        <h1></h1>
+                          <b class="pull-left">可维护基本信息</b>
+                          <button type="button" class="btn btn-warning pull-right btn-two">确定</button>
+                          <button type="button" class="btn btn-warning pull-right btn-two-del">删除</button>
+                          <div class="clearfix"></div>
+                        </div>
+                          <div class="table-box">
+                              <table class="pull-left">
+                                  <thead>
+                                    <td>选择</td>
+                                    <td>项目</td>
+                                    <td>必填</td>                             
+                                  </thead>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>申请表名称</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位负责人电话</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位负责人电话</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>垃圾数量</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>处置单位</td>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" class="hidden-input" />
+                                            <span class=""></span>
+                                        </label>
+                                    </td>
+                                  </tr>
+                              </table> 
+                              <table class="pull-right">
+                                  <thead>
+                                    <td>选择</td>
+                                    <td>项目</td>
+                                    <td>必填</td>                             
+                                  </thead>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>申请单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>建设单位负责人</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>项目名称</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>施工单位负责人</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>垃圾种类(下拉框)</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>运输单位</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" class="hidden-input">
+                                        <span class=""><span>
+                                      </label>
+                                    </td>
+                                    <td>运送时间</td>
+                                    <td>
+                                        <label>
+                                            <input type="checkbox" class="hidden-input" />
+                                            <span class=""></span>
+                                        </label>
+                                    </td>
+                                  </tr>
+                              </table>
+                          </div>
+                              <div class="clearfix"></div>
+                              <b class="pull-left">可上传附件信息</b> 
+                          <div class="table-box">
+                              <div class="clearfix"></div>
+                              <table class="pull-left">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>建筑垃圾处置申请表</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>工程施工图纸</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>与清运单位签订的清运协议</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="pull-right">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>建设工程规划许可证</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>与处置单位签订的处置协议</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <div class="clearfix"></div>                          
+                        </div>
+                        <b class="pull-left">指派审批人</b> 
+                        <div class="edit-select">
+                           <span>部门：</span>
+                           <select name="" id="">
+                             <option value="">请选择</option>
+                             <option value="">工程部</option>
+                             <option value="">财务部</option>
+                             <option value="">运输部</option>
+                           </select>                
+                        </div>
+                          <div class="table-box">
+                              <div class="clearfix"></div>
+                              <table class="pull-left">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>审批意见</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>上传附件</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <table class="pull-right">
+                                <thead>
+                                  <td>选择</td>
+                                  <td>项目</td>
+                                  <td>必填</td>                             
+                                </thead>
+                                <tr>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                  <td>审批结果</td>
+                                  <td>
+                                    <label>
+                                      <input type="checkbox" class="hidden-input">
+                                      <span class=""><span>
+                                    </label>
+                                  </td>
+                                </tr>
+                              </table>
+                              <div class="clearfix"></div> 
+                              <button type="button" class="addclasstwo">添加三级处置审批表</button>
+                        </div>
+                    </form> 
+                </div>
+                <div class="mess-hide-input">
+                    <h5>可审批文件：处置申请表</h5>
+                    <h5>可查看基本信息</h5>
+                    <p>申请表名称<!-- 名称内容 --></p>
+                    <p>申请单位</p>
+                    <p>建设单位</p>
+                    <p>建设单位负责人</p>
+                    <p>建设单位负责人电话</p>                  
+                    <p>项目名称</p>
+                    <p>施工单位</p>
+                    <p>施工单位负责人</p>
+                    <div class="clearfix"></div> 
+                    <h5>可查看附件信息</h5> 
+                    <p>建筑垃圾处置申请表</p>                  
+                    <p>建设工程规划许可证</p>
+                    <p>工程施工图纸</p>                
+                    <p>与处置单位签订的处置协议</p>  
+                    <p><i class="redspot"></i>与清运单位签订的清运协议</p>               
+                    <div class="clearfix"></div>
+                    <h5>指派审批人</h5> 
+                    <p>部门：工程部</p>                  
+                    <p>审批人：张飞</p>
+                    <p>审批意见</p> 
+                    <p><i class="redspot">*</i>审批结果</p>             
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 二级处置核准表 end -->
+
+            <!-- 其他信息 -->
+            <div class="mess-box ">
+              <div class="title"><p>其它信息</p></div>
+              <div class="mess-hide ">
+                <div class="mess-hide-mess">
+                    <p><span>状态：</span>
+                            <select name="" id="ifon">
+                                <option value="">有效</option>
+                                <option value="">无效</option>
+                            </select></p>
+                    <div class="clearfix"></div>
+                    <p><span>制表人：</span>李娟</p>
+                    <p><span>制表时间：</span>2013/02/23 8:00</p>
+                    <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+            <!-- 其他信息 end-->
+            
+            历史记录    
+            <div class="mess-box">
+              <div class="title"><p>历史记录</p></div>
+              <div class="mess-hide ">
+                <div class="mess-hide-mess">
+<!--                     <p><span>对账方式：</span>按月对账</p>
+                    <p><span>对账时间：</span>每月31号(不足31天的月份以最后一天)</p>
+                    <p><span>出账时间：</span>15天(对账日后)</p>
+                    <p><span>联系电话：</span>13323456789</p>
+                    <div class="clearfix"></div> -->
+                    <p>2016-03-14 17:25:22, 由 xxx 操作，将此表单置为无效。</p>
+                    <div class="clearfix"></div>
+                </div>
+              </div>            
+            </div>
+            <!-- 历史记录 end -->
+
+<!--             <div class="btn-box">
+                <button class="btn btn-warning">上一步</button>      
+                <button class="btn btn-warning">保存</button>
+                <button class="btn btn-warning">提交</button>      
+            </div> -->
+
+        </div><!-- mainright -->    
+
+
+    </main>
+
+    <!-- footer -->
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+     <!-- footer end-->
+
+<script type="text/javascript">
+  $(function(){
+       $(".edit").click(function(){ 
+          $(this).parent().find(".mess-hide-mess").hide();       
+          $(this).parent().find(".mess-hide-input").show();          
+            
+
+          $(".sub-btn").click(function(){
+           // var ss=$(this).parents().parents().parents(); 
+          var ss=$(this).parents();
+         
+          ss.children(".mess-hide-input").slideUp()
+          ss.children(".mess-hide-mess").slideDown();        
+        })
+     })
+
+       // 增加二级页面
+       $(".addclasstwo").click(function() {
+          $(".class-2-box").slideDown();
+       })
+      $(".btn-two").click(function(){
+           // var ss=$(this).parents().parents().parents(); 
+          var ss=$(this).parents();
+         
+          ss.children(".mess-hide-mess").slideUp()
+          ss.children(".mess-hide-input").slideDown();        
+        })
+     $(".btn-two-del").click(function(){
+          $(".class-2-box").slideUp();
+                 
+        })
+      $(".class2edit").click(function(){ 
+          $(this).parent().find(".mess-hide-input").hide();       
+          $(this).parent().find(".mess-hide-mess").show(); 
+          })    
+
+   })
+</script>
+</body>
+</html>

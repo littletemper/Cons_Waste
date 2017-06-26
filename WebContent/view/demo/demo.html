@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+table{
+  width: 80%;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+}
+tr{
+  height: 55px;
+  border-bottom: 1px solid #555;
+  text-align: center;
+}
+thead{
+  height: 40px;
+  font-weight: bolder;
+  background-color: #f0f0f0;
+}
+td:nth-child(2) a{
+  color: #74dfc6;
+}
+	</style>
+  <script src="../../js/jquery-2.1.4.min.js"></script>
+  <script type="text/javascript">
+      $.getJSON("date.json",function(date){
+            alert("dddd");
+      });
+
+  </script>
+</head>
+<body>
+    <table>
+    <thead>      
+      <td width="50">NO.</td>
+      <td width="120">消纳场名称</td>
+      <td width="150">所属公司</td>
+      <td width="220">消纳场地址</td>
+      <td width="110">负责人</td>           
+    </thead>
+    <tr>
+      <td>1</td>
+      <td><a href="">东郊消纳场</a></td>
+      <td>XXX消纳集团</td>
+      <td>河南省-洛阳市-老城区</td>
+      <td>张XX</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><a href="">北郊消纳场</a></td>
+      <td>XXX消纳企业</td>
+      <td>河南省-洛阳市-老城区</td>
+      <td>李XX</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><a href="">南郊消纳场</a></td>
+      <td>XXX消纳有限公司</td>
+      <td>河南省-驻马店市-驿城区</td>
+      <td>王XX</td>
+    </tr>           
+</table>
+</body>
+</html>

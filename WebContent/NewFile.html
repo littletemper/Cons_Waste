@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="js/jquery-2.1.4.min.js"></script>
+<script>
+	$(function(){
+		$('#aa').click(function(){
+			alert('a');
+			$.ajax({
+				url:"addproject.do",
+				type:'get'
+			});
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<buttton id="aa">sa</buttton>
+</body>
+</html>

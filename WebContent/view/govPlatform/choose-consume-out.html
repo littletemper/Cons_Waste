@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择消纳企业（弹出）</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+<style type="text/css">
+.mark{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.mark-uper{
+    width: 925px;
+    background-color: #fff;
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -400px;
+    padding: 50px 30px;
+}
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.info{
+  width: 100%;
+  height: 130px;
+  border: 1px solid #dcdcdc;
+  position: relative;
+  margin-bottom: 20px;
+}
+.btn{
+    position: absolute;
+    top:2px;
+    right: 20px;
+}
+.info form{
+  position: absolute;
+  right: 10px;
+  top: 68px;
+}
+.addbtn{
+  width: 100px;
+  height: 30px;
+  background: #f60;
+  margin: 20px;
+}
+
+.table-info{
+  width: 100%;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+.form-group{
+  margin-right: 10px;
+}
+.form-control{
+  width: 265px;
+}
+.form-lable{
+  float: left;
+  position: relative;
+  top: 7px;
+}
+.search-text{
+  width: 265px;
+  height: 34px;
+  float: left;
+}
+.search-btn{
+  width: 70px;
+  height: 35px;
+  background: url(../../img/search-btn.png);
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  cursor:pointer;
+  float: left;
+}
+/*tab--table*/
+.table-info{
+  width: 100%;
+  padding-bottom: 50px;
+  margin-top: 20px;
+}
+table{
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #dcdcdc;
+}
+tr{
+  height: 55px;
+  border-bottom: 1px solid #dcdcdc;
+  text-align: center;
+}
+thead{
+  height: 40px;
+  font-weight: bolder;
+  background-color: #f0f0f0;
+}
+</style>
+</head>
+<body >
+    <div class="mark"></div>
+    <div class="mark-uper">
+        <!-- search -->
+        <div class="info">
+            <div class="title"><p>选择消纳企业</p></div> 
+            <button class="btn btn-warning">确定</button>                    
+            <form class="form-inline pull-right">
+                <div class="form-group">
+                    <label for="" class="form-lable">关键字：</label>
+                    <input type="text" class="search-text" id="" placeholder="消纳企业名称">
+                    <button type="submit" class="search-btn"></button>
+                </div>     
+            </form>
+            <div class="clearfix"></div>  
+        </div>  
+        <!-- search end-->
+        <!-- table -->
+        <div class="table-info">
+          <table>
+            <thead>      
+              <td width="50">选择</td>
+              <td width="100">消纳场名称</td>
+              <td width="180">垃圾处理类型</td>
+              <td width="185">所属公司</td>
+              <td width="280">地址</td>
+              <td width="80">联系人</td>
+            </thead>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td><a href="">XXX消纳场</a></td>
+              <td>道路开挖垃圾</td>
+              <td>XXX建筑垃圾消纳集团
+              <td>河北省-驻马店市-驿城区</td>
+              <td>孙XXX</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td><a href="">XXX消纳场</a></td>
+              <td>道路开挖垃圾</td>
+              <td>XXX建筑垃圾消纳集团
+              <td>河北省-驻马店市-驿城区</td>
+              <td>孙XXX</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td><a href="">XXX消纳场</a></td>
+              <td>道路开挖垃圾</td>
+              <td>XXX建筑垃圾消纳集团
+              <td>河北省-驻马店市-驿城区</td>
+              <td>孙XXX</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox"></td>
+              <td><a href="">XXX消纳场</a></td>
+              <td>道路开挖垃圾</td>
+              <td>XXX建筑垃圾消纳集团
+              <td>河北省-驻马店市-驿城区</td>
+              <td>孙XXX</td>
+            </tr>
+        </table>            
+        <!-- table end-->
+
+        <!-- page -->
+        <nav class="pull-right">
+          <ul class="pagination">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- page end -->
+
+
+    </div>
+</body>
+</html>

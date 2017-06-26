@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新增清运合约-填写合约信息（无）</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    
+<style type="text/css">
+main{
+  width: 1206px;
+  margin: 0 auto;
+  padding: 0;
+}
+.mainright{
+  width: 925px;
+  float: right;
+  padding-bottom: 50px;
+}
+.mainright img{
+  width: 925px;
+  margin: 20px 0;
+}
+.title{
+  background: #f0f0f0;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bolder;
+  padding-left: 20px;
+}
+.title h6{
+  position: absolute;
+  left: 100px;
+  color: #fff;
+  font-weight: bolder;
+  padding: 4px 7px;
+  background-color: #f60;
+}
+.edit{
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  cursor: pointer;
+  background-image: url(../../img/edit.png);
+}
+
+/*tab--table*/
+.mess-box{
+  margin-bottom: 20px;
+  line-height: 26px;
+  position: relative;
+}
+.mess-box span{
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+.mess-box p{
+  width: 420px;
+  height: 35px;
+  float: left;
+}
+
+.mess-show,.mess-hide{
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+}
+.mess-hide-input{
+  width: 840px;
+  border:1px solid #309bbe;
+  border-top: 5px solid #309bbe;
+  margin: 0 auto;
+  line-height: 60px;
+}
+.mess-hide-input input{
+  height: 30px;
+}
+.mess-hide-input label{
+  width: 110px;
+  height: 40px;
+  border: 1px solid #dcdcdc;
+  line-height: 40px;
+}
+.mess-hide-input input[type=radio]{
+ /* display: none;*/
+}
+.btn-warning{
+  background-color: #f60;
+}
+.btn-box{
+  width: 350px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.map-input{
+  width: 700px;
+  height: 140px;
+  border: 1px solid #dcdcdc;
+  margin-left: 105px;
+  margin-top: -40px;
+}
+.map-input img{
+  width: 700px;
+  height: 140px;
+  margin: 0;
+  padding: 0;
+}
+.transport-charge input[type=radio]{
+    /*display: inline-block;*/
+}
+.transport-charge label{
+  border: 0;
+}
+.radio-box label{
+  margin-left: -18px;
+  margin-right: 10px;
+}
+.radio-box input{
+  opacity: 0;
+}
+.radio-box input[type=radio]:checked +label{
+  border-color:#f60; 
+  background: url(../../img/sanjiao.png) no-repeat 92px 22px;
+}
+.per-box{
+  width: 240px;
+  height: 30px;
+  position: absolute;
+  right: 200px;
+  top: 400px;
+}
+.per-input{
+  float: left;
+}
+
+.per-charge{
+  float: left;
+  height: 30px;
+}
+.space{
+  display: inline-block;
+  width: 200px;
+}
+.node{
+  display: inline-block;
+  width: 29px;
+  height: 29px;
+  border:1px solid #dcdcdc;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  box-sizing:content-box;
+  margin-left: -3px;
+}
+.conts{
+   width:100px;
+   text-align:center;
+}
+.mess-hide{
+  display: none;
+}
+.mess-hide-mess{
+  display: none;
+}
+</style>
+
+<script type="text/javascript">
+	$(function(){
+		$("#submit").click(function(){
+			
+				  var project= new Object();
+	              project.p_id=$("#id").val();
+	              project.p_name=$("#name").val();
+	              project.p_location=$("#location").val();
+	              project.resp_p=$("#person").val();
+	              project.resp_p_tel=$("#telephone").val();
+	              project.surflaes=$("#amounts").val();
+	              var str=JSON.stringify(project);
+	              
+	    		  
+				$.ajax({
+				  url: "../../addproject.do",
+	              type: "get",
+	              data:{str:str},
+	              dataType:'json',
+	              
+	              success: function(msg) {
+	            	  if(msg.code == "200")
+	    				{
+	    					alert("提交成功！");
+	    				}
+	    				
+	              }, 
+	    			error: function(msg) {
+	    				if(msg.code == "500")
+	    				{
+	    					alert("提交失败！");
+	    				}
+	    				
+	              
+	              }
+	    		});
+		});
+	});
+</script>
+<!--
+<script type="text/javascript">
+  $(function(){
+	  alert(3333);
+  
+       $(".edit").click(function(){      
+          $(this).parent().find(".mess-show").hide();
+          $(this).parent().find(".mess-hide-input").show();          
+          $(this).parent().find(".mess-hide").show();    
+
+          $(".sub-btn").click(function(){
+          var ss=$(this).parents().parents().parents();
+          ss.children(".mess-hide-input").slideUp()
+          ss.children(".mess-hide-mess").slideDown();
+        
+        })
+
+     })
+     
+      $("#submit").click(function(){
+    	  
+      
+    	  $.ajax({
+    		  
+    		  var project={};
+              project.p_id=$("id").val();
+              project.p_name=$("name").val();
+              project.p_location=$("location").val();
+              project.resp_p=$("person").val();
+              project.resp_p_tel=$("telephone").val();
+              project.surflaes=$("amounts").val();
+              var str=JSON.stringify(project);
+    		  
+              type: "get",
+              url: "addProject.do?str"+str,
+              dataType: "json",
+              
+              
+              success: function(msg) {
+                alert("提交成功！");
+              }, 
+    			error: function(msg) {
+              	alert("提交失败！");
+              }
+    		});
+
+      });
+      
+   });
+</script>
+-->
+</head>
+<body >
+    <!-- head -->
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+    <!-- head end-->
+<div style="width:1206px;margin:0 auto">
+    <!--左菜单-->
+    <object  data="../leftMenu/govplatform-left.html" width=260px height=840"></object>
+    <!--主内容-->
+    <div style="width:935px;height:1000px;float: right">
+     <div class="mainright">
+            <div class="title"><p>新增合约-合约信息输入</p></div> 
+            <hr>
+            <div class="mess-box">
+              <div class="title"><p>项目信息</p></div>
+              <div class="mess-show mess-1">
+                <p><span>项目编号：</span><input type="text" id="id"></input></p>
+                <p><span>项目名称：</span><input type="text" id="name"></input></p>
+                <p><span>项目地址：</span><input type="text" id="location"></input></p>
+                <p><span>负责人：</span><input type="text" id="person"></input></p>
+                <p><span>负责人电话：</span><input type="text" id="telephone"></input></p>
+                <p><span>残土数量：</span><input type="text" id="amounts"></input></p>
+                <div class="clearfix"></div>
+              </div>
+              <div class="mess-hide"></div>
+            </div>
+            <!--  <div class="mess-box">
+              <div class="title"><p>消纳场信息</p></div>
+              <div class="mess-show">
+                <p><span>消纳场名称：</span>XXX渣土清运项目</p>
+                <p><span>消纳场地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+                <p><span>联系人：</span>张XXX</p>
+                <p><span>联系人电话：</span>13323456789</p>
+                <p><span>垃圾类型：</span>道路开挖垃圾、建筑施工垃圾</p>
+                <p><span>消纳数量：</span>XXX m</p>
+                <p><span>所属公司：</span>XXXXXXXX消纳公司</p>
+                <p><span>和项目关系：</span>项目下消纳场</p>
+                <div class="clearfix"></div>                
+              </div>
+              <div class="mess-hide"></div>
+            </div>
+            <div class="mess-box">
+              <div class="title"><p>运输公司信息</p></div>
+              <div class="mess-show">
+                <p><span>公司名称：</span>XXX渣土清运公司</p>
+                <p><span>公司地址：</span>XX省-XX市-XX区 XXXXXXXXX</p>
+                <p><span>联系人：</span>张XXX</p>
+                <p><span>联系电话：</span>13323456789</p>
+                <div class="clearfix"></div>
+              </div>
+              <div class="mess-hide"></div>
+            </div>
+           --> 
+            <div class="btn-box">
+                <button class="btn  btn-warning">上一步</button>      
+                <button class="btn  btn-warning">保存</button>
+                <button class="btn  btn-warning" id="submit">提交</button>      
+            </div>
+
+        </div><!-- mainright --> 
+    
+    </div>
+</div>
+
+
+    <!-- footer -->
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+     <!-- footer end-->
+
+
+</body>
+</html>

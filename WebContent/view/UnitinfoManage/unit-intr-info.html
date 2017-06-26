@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>单位简介信息维护</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+    <link href="../../css/dropzone.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/leftbar.css">
+    <link rel="stylesheet" href="../../css/unit-intr-info.css">
+<style type="text/css">
+.pic-box{
+    box-sizing:content-box;
+}
+.pic-box img{
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+</style>
+</head>
+<body >
+
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+
+<!-- 	<object style="border:0px" type="text/x-scriptlet" data="./main/unit-intr-info.html" width=100% height=740></object> -->
+    <main>
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/unit-left.html">
+        </iframe>
+           
+        <div class="mainright">
+            <div class="info">
+                <p>单位简介</p>
+                <h5><span>*</span>企业图片：最多可上传5张。支持jdp,jdeg,gif,png格式，单张最大2M。</h5>
+                <div class="box">
+                  <div class="pic-box">
+                      <form action="/file-upload"class="dropzone"id="my-awesome-dropzone1" class="dropzone dropzone-box"></form>
+                  </div>
+                  <div class="pic-box">
+                      <form action="/file-upload"class="dropzone"id="my-awesome-dropzone2" class="dropzone dropzone-box"></form>
+                  </div>
+                  <div class="pic-box">
+                      <form action="/file-upload"class="dropzone"id="my-awesome-dropzone3" class="dropzone dropzone-box"></form>
+                  </div>
+                  <div class="pic-box">
+                      <form action="/file-upload"class="dropzone"id="my-awesome-dropzone4" class="dropzone dropzone-box"></form>
+                  </div>
+                  <div class="pic-box">
+                      <form action="/file-upload"class="dropzone"id="my-awesome-dropzone5" class="dropzone dropzone-box"></form>
+                  </div>
+                </div>
+                <h5><span>*</span>企业介绍：</h5>
+                <div class="textarea">
+                    <textarea name="" id="" cols="100" rows="6"></textarea>
+                    <h1>您当前输入了216个文字。(字数统计包含纯文本、IMG、EMBEND，不包含换行符，IMG和EMBED算一个字符。)还可以输入1784字</h1>
+                </div>
+                <div class="clearfix"></div>
+                <button class="btn btn-warning">保存并发布</button>
+            </div>
+        </div>
+            
+    </main>
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+
+ <script type="text/javascript" src="../../js/dropzone.js"></script>
+</body>
+</html>

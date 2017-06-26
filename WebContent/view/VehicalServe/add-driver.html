@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>添加司机(列表)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!--bootstrap-->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--coustom css-->
+    <link href="../../css/style.css" rel="stylesheet" type="text/css">
+    <!--default-js-->
+    <script src="../../js/jquery-2.1.4.min.js"></script>
+    <!--bootstrap-js-->
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../../css/leftbar.css">
+    <link rel="stylesheet" href="../../css/vehical-list.css">
+<style type="text/css">
+.mark{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.6;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+.person{
+    width: 800px;
+    background-color: #fff;
+    z-index: 1000;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    margin-left: -400px;
+    padding: 50px 30px;
+}
+.person h5{
+    padding:10px 20px;
+}
+.person img{
+    margin-left: 100px;
+}
+figure{
+    width: 290px;
+    height: 185px;
+    float: left;
+    margin: 20px 0;
+    
+}
+figcaption{
+    margin-left: 210px;
+    
+}
+table{
+    width: 100%;
+    font-size: 14px;
+    border: 1px solid #dcdcdc;
+    margin-top: 30px;
+}
+
+tr{
+    height: 55px;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+
+}
+td:nth-child(2) a{
+    color: #555;
+}
+td:nth-child(7) a{
+    color: #f60;
+    text-decoration: underline;
+}
+thead{
+    height: 40px;
+    font-weight: bolder;
+    background-color: #f0f0f0;
+}
+.btn{
+    width: 100px;
+    background-color: #f90;
+    margin: 30px 0 0 320px ;
+}
+
+</style>
+</head>
+<body >
+
+	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
+
+<!-- 	<object style="border:0px" type="text/x-scriptlet" data="./main/vehical-list.html" width=100% height=740></object> -->
+    <main>
+        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/vehicalserve-left.html">
+        </iframe>         
+        <div class="mainright">
+            <div class="info">
+                <p>成员管理</p>
+                <button class="btn btn-warning addbtn">新增车辆</button>
+                <form class="form-inline pull-right">
+                    <div class="form-group">
+                        <label for="exampleInputName2" class="form-lable">关键字：</label>
+                        <input type="text" class="search-text" id="">
+                        <button type="submit" class="search-btn"></button>
+                    </div>   
+                </form>
+                <div class="clearfix"></div>  
+            </div>
+            <div class="table-info">
+                <table>
+                    <thead>      
+                        <td width="50">NO.</td>
+                        <td width="170">角色</td>
+                        <td width="80">成员名称</td>
+                        <td width="105">联系电话</td>
+                        <td width="80">操作</td>
+                    </thead>
+                    <tr>
+                        <td>1</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><a href="">中国远大运输有限公司</a></td>
+                        <td>李大伟</td>
+                        <td>13345678945</td>
+                        <td>司机</td>
+                        </tr>
+                </table>
+            </div>
+        </div>           
+    </main>
+
+	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 
+
+     <div class="mark"></div>
+        <div class="person">
+            <blockquote>
+              <h3>添加司机</h3>         
+            </blockquote>
+            <table>
+              <thead>      
+                <td width="50">选择</td>
+                <td width="170">司机姓名</td>
+                <td width="80">联系电话</td>
+                <td width="170">驾照</td>
+                <td width="80">驾龄</td>
+              </thead>
+              <tr>
+                <td><input type="checkbox" ></td>
+                <td><a href="">李峰</a></td>
+                <td>13312345678</td>
+                <td><a href="">B1</a></td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" ></td>
+                <td><a href="">李峰</a></td>
+                <td>13312345678</td>
+                <td><a href="">B1</a></td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" ></td>
+                <td><a href="">李峰</a></td>
+                <td>13312345678</td>
+                <td><a href="">B1</a></td>
+                <td>5</td>
+              </tr>
+                <td><input type="checkbox" ></td>
+                <td><a href="">李峰</a></td>
+                <td>13312345678</td>
+                <td><a href="">B1</a></td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" ></td>
+                <td><a href="">李峰</a></td>
+                <td>13312345678</td>
+                <td><a href="">B1</a></td>
+                <td>5</td>
+              </tr>
+            </table>
+            <button class="btn btn-warning ">确定</button>
+        </div>
+
+</body>
+</html>
