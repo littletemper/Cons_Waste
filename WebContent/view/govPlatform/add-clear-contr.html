@@ -178,95 +178,46 @@ main{
 </style>
 
 <script type="text/javascript">
-	$(function(){
-		$("#submit").click(function(){
-			
-				  var project= new Object();
-	              project.p_id=$("#id").val();
-	              project.p_name=$("#name").val();
-	              project.p_location=$("#location").val();
-	              project.resp_p=$("#person").val();
-	              project.resp_p_tel=$("#telephone").val();
-	              project.surflaes=$("#amounts").val();
-	              var str=JSON.stringify(project);
-	              
-	    		  
-				$.ajax({
-				  url: "../../addproject.do",
-	              type: "get",
-	              data:{str:str},
-	              dataType:'json',
-	              
-	              success: function(msg) {
-	            	  if(msg.code == "200")
-	    				{
-	    					alert("提交成功！");
-	    				}
-	    				
-	              }, 
-	    			error: function(msg) {
-	    				if(msg.code == "500")
-	    				{
-	    					alert("提交失败！");
-	    				}
-	    				
-	              
-	              }
-	    		});
-		});
-	});
-</script>
-<!--
-<script type="text/javascript">
-  $(function(){
-	  alert(3333);
-  
-       $(".edit").click(function(){      
-          $(this).parent().find(".mess-show").hide();
-          $(this).parent().find(".mess-hide-input").show();          
-          $(this).parent().find(".mess-hide").show();    
-
-          $(".sub-btn").click(function(){
-          var ss=$(this).parents().parents().parents();
-          ss.children(".mess-hide-input").slideUp()
-          ss.children(".mess-hide-mess").slideDown();
-        
-        })
-
-     })
-     
-      $("#submit").click(function(){
-    	  
-      
-    	  $.ajax({
-    		  
-    		  var project={};
-              project.p_id=$("id").val();
-              project.p_name=$("name").val();
-              project.p_location=$("location").val();
-              project.resp_p=$("person").val();
-              project.resp_p_tel=$("telephone").val();
-              project.surflaes=$("amounts").val();
+$(function(){
+	$("#submit").click(function(){
+		
+			  var project= new Object();
+              project.p_id=$("#id").val();
+              project.p_name=$("#name").val();
+              project.p_location=$("#location").val();
+              project.resp_p=$("#person").val();
+              project.resp_p_tel=$("#telephone").val();
+              project.surflaes=$("#amounts").val();
               var str=JSON.stringify(project);
-    		  
-              type: "get",
-              url: "addProject.do?str"+str,
-              dataType: "json",
               
+    		  
+			$.ajax({
+			  url: "../../addproject.do",
+              type: "get",
+              data:{str:str},
+              dataType:'json',
               
               success: function(msg) {
-                alert("提交成功！");
+            	  if(msg.code == "200")
+    				{
+    					alert("提交成功！");
+    				}
+    				
               }, 
     			error: function(msg) {
-              	alert("提交失败！");
+    				if(msg.code == "500")
+    				{
+    					alert("提交失败！");
+    				}
+    				
+              
               }
     		});
+	});
+});
 
-      });
-      
-   });
 </script>
--->
+
 </head>
 <body >
     <!-- head -->
@@ -339,3 +290,10 @@ main{
 
 </body>
 </html>
+
+
+
+
+
+
+ 

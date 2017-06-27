@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>消纳合约查看列表</title>
+    <title>清运合约查看列表</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <!--bootstrap-->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -24,7 +24,6 @@ main{
 .mainright{
   width: 925px;
   float: right;
-  margin-bottom: 30px;
 }
 /*search-bar*/
 .title{
@@ -36,7 +35,6 @@ main{
 }
 .info{
   width: 100%;
-  height: 130px;
   border: 1px solid #dcdcdc;
   position: relative;
   margin-bottom: 20px;
@@ -66,6 +64,9 @@ main{
   text-align: center;
   position: relative;
   top: 3px;
+}
+.right-bottom{
+  border: 1px solid #dcdcdc;
 }
 .form-group{
   margin-right: 10px;
@@ -101,6 +102,7 @@ main{
 /*tab--table*/
 .table-info{
   width: 95%;
+ 
   margin: 20px auto;
 }
 table{
@@ -118,24 +120,19 @@ thead{
   font-weight: bolder;
   background-color: #f0f0f0;
 }
-.right-bottom{
-  border: 1px solid #dcdcdc;
-}
+
 </style>
 </head>
 <body >
     <!-- head -->
 	<object style="border:0px" type="text/x-scriptlet" data="../header/head.html" width=100% height=240></object>
     <!-- head end-->
-
-
-	<main>
-        <!-- leftmenu -->
-        <iframe border=0 frameborder=0 width=250 height=500 marginheight=0 marginwidth=0 scrolling=no src="../LeftMenu/govplatform-left.html">
-        </iframe>
-        <!-- leftmenu end-->
-           
-        <div class="mainright">
+<div style="width:1206px;margin:0 auto">
+    <!--左菜单-->
+    <object  data="../leftMenu/govplatform-left.html" width=260px height=840"></object>
+    <!--主内容-->
+    <div style="width:935px;height:1000px;float: right">
+     <div class="mainright">
             <!-- search -->
             <div class="info">
                 <div class="title"><p>消纳合约查看列表</p></div>      
@@ -343,10 +340,11 @@ thead{
                   </div>
                 </div>
             </div>  
-        </div>     
+        </div>
+    
+    </div>
+</div>
 
-
-    </main>
 
     <!-- footer -->
 	<object style="border:0px;" type="text/x-scriptlet" data="../footer/foot.html" width=100% height=80></object> 

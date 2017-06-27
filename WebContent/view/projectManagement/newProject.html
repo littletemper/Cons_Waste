@@ -4,16 +4,60 @@
     <meta charset="UTF-8">
     <title>新增项目信息</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <script src="../../js/jquery-2.1.4.min.js"></script>
     <!--bootstrap-->
     <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <!--coustom css-->
     <link href="../../css/style.css" rel="stylesheet" type="text/css">
     <!--default-js-->
-    <script src="../../js/jquery-2.1.4.min.js"></script>
+   
     <!--bootstrap-js-->
     <script src="../../js/bootstrap.min.js"></script>
 
     <link href="../../css/common.css" rel="stylesheet" type="text/css">
+   <script type="text/javascript">
+$(function(){
+	
+	//正则
+	 
+
+	$("#submit").click(function(){
+
+			   var object= new Object();
+	           object.i_name=$("#name").val();
+	           object.i_location=$("#location").val();
+	           object.i_charge=$("#charge").val();
+	           object.i_phone=$("#phone").val();
+           
+               var str=JSON.stringify(object);
+              
+    			
+			$.ajax({
+			  url: "../../addItem.do",
+              type: "get",
+              data:{str:str},
+              dataType:'json',
+            
+              success: function(msg) {
+            	  if(msg.code == "200")
+    				{
+    					alert("提交成功！");
+    				}
+    				
+              }, 
+    			error: function(msg) {
+    				if(msg.code == "500")
+    				{
+    					alert("提交失败！");
+    				}
+    				
+              
+              }
+    		});
+	});
+});
+
+</script>
 </head>
 <body >
 <!--头-->
@@ -21,62 +65,28 @@
 <!--body-->
 <div style="width:1206px;margin:0 auto">
     <!--左菜单-->
-    <object  data="../leftMenu/parkingLeft.html" width=260px height=840"></object>
+    <object  data="../leftMenu/govplatform-left.html" width=260px height=840"></object>
     <!--主内容-->
     <div style="width:935px;height:1000px;float: right">
-        <div class="parkBasic" style="height:700px;">
+    <div class="parkBasic" style="height:700px;">
             <div class="parkBg">
                 <span>新增项目基本信息</span>
             </div>
             <div class="basic">
                 <span style="color: #ff6600;margin-left:56px;">*</span><span>项目名称:</span>
-                <input type="text">
+                <input type="text" id="name">
                 <span style="color: #ff6600;margin-left:60px;">*</span><span>项目负责人:</span>
-                <input type="text">
+                <input type="text" id="charge">
                 <span style="color: #ff6600;margin-left:22px;">*</span><span>项目负责人电话:</span>
-                <input type="text">
+                <input type="text" id="phone">
+                
             </div>
-            <div class="basic">
-                <span style="color: #ff6600;margin-left:38px;"></span><span> 建筑面积(㎡):</span>
-                <input type="text">
-                <span style="color: #ff6600;margin-left:54px;"></span><span> 占地面积(㎡):</span>
-                <input type="text">
-                <span style="color: #ff6600;margin-left:30px;"></span><span>计划残土量(m³):</span>
-                <input type="text">
-            </div>
-            <div class="basic">
-                <span style="color: #ff6600;margin-left:62px;"></span><span>建设单位:</span>
-                <input type="text">
-                <span style="color: #ff6600;margin-left:78px;"></span><span>施工单位:</span>
-                <input type="text">
-            </div>
-            <div class="basic">
-                <span style="color: #ff6600;margin-left:62px;"></span><span>设计单位:</span>
-                <input type="text">
-                <span style="color: #ff6600;margin-left:78px;"></span><span>监理公司:</span>
-                <input type="text">
-            </div>
+      
+  
             <div class="basic">
                 <span style="color: #ff6600;margin-left:58px;">*</span><span>项目地址:</span>
-                <select style="width: 150px;height:27px;">
-                    <option>河南</option>
-                    <option>北京</option>
-                </select>
-                <span style="color: #ff6600;margin-left:139px;"></span>
-                <select style="width: 150px;height:27px;">
-                    <option>驻马店</option>
-                    <option>丰城区</option>
-                </select>
-                <span style="color: #ff6600;margin-left:132px;"></span>
-                <select style="width: 150px;height:27px;">
-                    <option>驿城区</option>
-                    <option>丰益桥</option>
-                </select>
-            </div>
-            <div class="basic">
-                <input type="text" placeholder="请输入详细地址...." style="width: 300px;margin-left: 127px;">
-                <img src="../../img/picture3.png">
-                <span><a style="color: #f60;text-decoration: none">地图选点</a></span>
+                <input type="text" id="location">
+              
             </div>
             <div class="basic2">
                 <span style="margin-left:64px">项目照片:</span>
@@ -84,52 +94,10 @@
             <img src="../../img/picture4.png" style="margin-left: 128px;margin-top: -30px;">
             <img src="../../img/picture4.png" style="margin-left: 128px;margin-top: -30px;">
             <div class="anNiu"style="margin-left:420px;margin-top:70px">
-                <input type="button" value="　保存　" >
+              <button class="btn  btn-warning" id="submit">保存</button>  
             </div>
         </div>
-        <!--合约-->
-        <div class="parkBasic" style="height:40px;margin-top: 20px;">
-            <div class="parkBg">
-                <span>合约信息</span>
-                <div class="anNiu2">
-                    <input type="button" value="　添加合约　" >
-                </div>
-                <table border="0"  cellpadding="0" cellspacing="0" class="table2">
-                    <thead style="font-weight: bold">
-                    <tr>
-                        <td>合约名称</td>
-                        <td>联系人</td>
-                        <td>电话</td>
-                        <td>计划残土量(m³)</td>
-                        <td>有效期</td>
-                        <td>状态</td>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr >
-                        <td>残土清运合约</td>
-                        <td>老吕 </td>
-                        <td>13988889999</td>
-                        <td>3000.0</td>
-                        <td>2016-01-21~2016-05-01</td>
-                        <td>已完成</td>
-                    </tr>
-                    <tr >
-                        <td>残土清运合约</td>
-                        <td>老吕 </td>
-                        <td>13988889999</td>
-                        <td>2000.0</td>
-                        <td>2016-01-21~2016-05-01</td>
-                        <td>进行中</td>
-                    </tr>
-                    </tbody>
-                </table>
-                <div class="anNiu2"style="margin-top: 10px;margin-left:820px;">
-                    <input type="button" value="　保存　" >
-
-                </div>
-            </div>
-        </div>
+        
     </div>
 
 </div>
